@@ -102,9 +102,9 @@ function mem_info(){
     echo "*********************************"
 	vmstat
     echo "***********************************"
-	echo "*** Top 10 memory eating process ***"
+	echo "*** Top 15 memory eating process ***"
     echo "***********************************"	
-	ps auxf | sort -nr -k 4 | head -10	
+	ps auxf | sort -nr -k 4 | head -15	
 	pause
 }
 # Purpose - Get input via the keyboard and make a decision using case..esac 
