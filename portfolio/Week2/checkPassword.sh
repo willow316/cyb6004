@@ -1,49 +1,53 @@
 
        #!/bin/bash 
+#Script is designed to take a password input from a user and test it through the follow conditions for security, the script has been tabbed to allow for easier view of the IF loops      
+#echo -s "enter the password" 
       
-echo "enter the password" 
+#read password #variable set for the input password
+read -sp 'Enter the Password :' password
+echo ""    
+len="${#password}"  # len is a variable assigned for the password input set to ASCII
+
+#echo $len - testing the output to make sure it
       
-read password 
+if test $len -ge 8; then  #test is used to set an output condition 0=true / 1=false , could use [  ]
       
-len="${#password}"  # len is used to check the length of a string, password being the variable input by the user
+    echo "$password" | grep -q [0-9] # grep is used to search the string in this case checking for numbers 0-9 (using an array) -q is slient (not printed)
       
-if test $len -ge 8 ; then  #if password is greater than 8 the if statement moves to the next logic if not, exit with error in the final 'else'
+        if test $? -eq 0 ; then #$? - is checking if the last command exit was 0 (or correct), if the command fails it = 1
       
-    echo "$password" | grep -q [0-9] # grep is used to search a string in this case checking for numbers 0-9
+        echo "$password" | grep -q [A-Z] # grep is used to search the string in this case checking for CAPS (using an array)
       
-    if test $? -eq 0 ; then 
+            if test $? -eq 0 ; then 
       
-    echo "$password" | grep -q [A-Z] 
+            echo "$password" | grep -q [a-z] # grep is used to search the string in this case checking for lowercase (using an array)
       
-    if test $? -eq 0 ; then 
+                if test $? -eq 0 ; then 
       
-    echo "$password" | grep -q [a-z] 
+                echo "$password" | grep -q [$,@,#,%] # grep is used to search the string in this case checking for 4 special symbols (using an array)
       
-    if test $? -eq 0 ; then 
+                    if test $? -eq 0 ; then 
       
-    echo "$password" | grep -q [$,@,#,%] 
+                          echo "Strong password"   
+                          #if all conditions are met then the if statement prints this and will end at line 59 otherwise each if statement will step through from above
       
-    if test $? -eq 0 ; then 
+                else 
       
-    echo "Strong password" 
+                echo "weak password include special chars" 
+      
+                fi 
+      
+            else 
+      
+            echo "weak password include lower case char" 
+      
+            fi 
       
         else 
       
-        echo "weak password include special chars" 
+        echo "weak password include capital char" 
       
         fi 
-      
-    else 
-      
-    echo "weak password include lower case char" 
-      
-    fi 
-      
-    else 
-      
-    echo "weak password include capital char" 
-      
-    fi 
       
     else 
       
