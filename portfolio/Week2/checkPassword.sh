@@ -6,7 +6,7 @@
 #read password #variable set for the input password
 read -sp 'Enter the Password :' password
 echo ""    
-len="${#password}"  # len is a variable assigned for the password input set to ASCII
+len="${#password}"  # len is a variable assigned for the password 
 
 #echo $len - testing the output to make sure it
       
@@ -16,7 +16,7 @@ if test $len -ge 8; then  #test is used to set an output condition 0=true / 1=fa
       
         if test $? -eq 0 ; then #$? - is checking if the last command exit was 0 (or correct), if the command fails it = 1
       
-        echo "$password" | grep -q [A-Z] # grep is used to search the string in this case checking for CAPS (using an array)
+        echo "$password" | grep -q [A-Z] # grep is used to search the string in this case checking for CAPS (using an array), it will store a 0 if +ve which plays into the next test cmd
       
             if test $? -eq 0 ; then 
       
