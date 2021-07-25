@@ -1,12 +1,12 @@
 #!/bin/bash
-set -x
+#set -x
 
 read -sp "Enter your current Password : " passwordin
 echo ""
 echo ""
 echo "your input was"
 echo ""
-echo $passwordin #| sha256sum | cut -f 1 -d " "
+echo $passwordin | sha256sum | cut -f 1 -d " "
 #userask=$passwordin | sha256sum | cut -f 1 -d " "
 echo ""
 #echo $userask | sha256sum | cut -f 1 -d " "

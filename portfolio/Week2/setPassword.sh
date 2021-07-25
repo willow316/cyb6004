@@ -17,8 +17,10 @@
                     #echo "Password: " $pass_var
 
                         #The version includes writing both the password AND SHA values to prove ability to write out, in theory line 20 would be excluded
-                        echo "$pass_var" >> secret.txt
-                        #echo "$pass_var" | sha256sum >> secret.txt  
+                        #echo "$pass_var" >> secret.txt
+                        echo "$pass_var" | sha256sum > secret.txt
+                        echo ""
+                        #echo "You set password as : " $pass_var
                     
                     #Previous testing to work out how to extract the VAR
                     #echo $FolderName1 >> secret.txt

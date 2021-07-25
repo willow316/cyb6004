@@ -10,6 +10,17 @@ function pause(){
 	[ -z $message ] && message="Press [Enter] key to continue..."
 	read -p "$message" readEnterKey
 }
+# Purpose - Password check before authorisation into the menu application
+function passwordcheck(){
+	./passCheck_1.sh
+		if test $? -eq 0 ; then
+				show_menu
+				read_input
+			else
+			echo "Goodbye"
+		fi
+	exit 0
+}
 
 # Purpose  - Display a menu on screen
 function show_menu(){
@@ -34,8 +45,17 @@ function write_header(){
 }
 
 # Purpose - Get info about your operating system
-function os_info(){
+function create(){
 	./foldermaker.sh
+	if test $? -eq 0 ;then
+			echo "Folder Created4"
+			show_menu
+			read_input
+	else
+		echo "Error with command please repeat"
+			show_menu
+			read_input
+	fi
 	#pause "Press [Enter] key to continue..."
 	pause
 }
@@ -43,14 +63,19 @@ function os_info(){
 # Purpose - 
 function copy(){
 	./foldercopier.sh
-	pause
+		pause
 }
 
 # Purpose - 
 function set(){
 	./setPassword.sh
-
-	pause 
+	if test $? -eq 0 ; then
+				show_menu
+				read_input
+			else
+			echo "Goodbye"
+	fi
+			pause 
 }
 # Purpose - Get input via the keyboard and make a decision using case..esac 
 function read_input(){
@@ -74,6 +99,6 @@ trap '' SIGINT SIGQUIT SIGTSTP
 while true
 do
 	clear
- 	show_menu	# display memu
- 	read_input  # wait for user input
+ 	passwordcheck	# display memu
+ 	#read_input  # wait for user input
 done
