@@ -9,18 +9,18 @@ function pause(){
 	local message="$@"
 	[ -z $message ] && message="Press [Enter] key to continue..."
 	read -p "$message" readEnterKey
-}
+#}
 # Purpose - Password check before authorisation into the menu application
-function passwordcheck(){
-	./passCheck.sh
-		if test $? -eq 0 ; then
+#function passwordcheck(){
+#	./passCheck.sh
+#		if test $? -eq 0 ; then
 				show_menu
 				read_input
-			else
-			echo "Goodbye"
-		fi
-	exit 0
-}
+#			else
+#			echo "Goodbye"
+#		fi
+#	exit 0
+#}
 
 # Purpose  - Display a menu on screen
 function show_menu(){
@@ -28,10 +28,11 @@ function show_menu(){
     echo "---------------------------"
     echo "   Main Menu"
     echo "---------------------------"
-	echo "1. Create a Folder"
-	echo "2. Copy a Folder"
-	echo "3. Set a Password"
-	echo "4. exit"
+	echo "1. Addition"
+	echo "2. Subtraction"
+	echo "3. Multiply"
+	echo "4. Division"
+	echo "5. Exit"
 
 }
 
@@ -44,19 +45,13 @@ function write_header(){
 	echo "---------------------------------------------------------------"
 }
 
-# Purpose - Get info about your operating system
-function create(){
-	./foldermaker.sh
-	if test $? -eq 0 ;then
-			echo "Folder $folderglobal was created!"
-			echo ""
-			show_menu
-			read_input
-	else
-		echo "Error with command please repeat"
-			show_menu
-			read_input
-	fi
+# Purpose - add two values with BLUE text
+function add(){
+	tput setaf 4;
+				read -p "Value of A " A
+				read -p "Value of B " B
+				((H=F+G))
+		echo $H
 	#pause "Press [Enter] key to continue..."
 	pause
 }
