@@ -9,7 +9,7 @@ if (( $#!=3 )); then
       
     #Print an error and exit 
       
-    echo "Error, provide three numbers" && exit 1 
+    echo "Error, provide 3 numbers" && exit 1 
       
 fi 
       
@@ -23,7 +23,7 @@ do
       
     echo "Creating directory number $i" 
       
-    mkdir "week $i" 
+    mkdir "week$i" 
       
 done 
      

@@ -15,6 +15,7 @@ for LINE in $LINES;
 
 	do
 		if grep -q '.sh' $LINE; then
+		#if (echo $LINE | grep -q '.sh') ; then
 		echo "This is a bash file"
 		else
 		counter=1

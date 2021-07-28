@@ -28,7 +28,7 @@ for LINE in $LINES;
 						echo $LINE " : This is a text file"
 		
 								#elif grep -q '' $LINE; then
-								elif (echo $LINE | grep -q '') ; then
+								#elif (echo $LINE | grep -q '') ; then
 								#echo $LINE " : empty line"
 									counter=1
 									#elif grep -q '/' $LINE; then

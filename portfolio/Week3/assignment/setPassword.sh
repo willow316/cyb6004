@@ -11,7 +11,8 @@
             #echo "Folder Name Selected :"$FolderName1
         #mkdir $FolderName1
         #cd $FolderName1
-                    read -sp 'Password :' pass_var
+                    tput setaf 2;
+                    read -sp 'Enter your choosen password :' pass_var
                         echo ""  
                     # Testing line commented out for final version (allowing me to see the outputs) 
                     #echo "Password: " $pass_var
@@ -27,7 +28,7 @@
                     #read $FolderName1 > ./Secret.txt
                     #read -p 'Password :' $pass_var 
                     #echo $FolderName1 >> Secret.txt
-            echo ""
+            tput setaf 6;
             echo "Thanks for storing your password in our keypass"
 
 exit 0
