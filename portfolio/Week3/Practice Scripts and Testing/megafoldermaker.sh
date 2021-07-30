@@ -6,26 +6,23 @@
 #read b
    if (( $#!=2 )); then 
       
-   Print an error and exit 
+    #Print an error and exit 
       
-   echo "Error, provide two numbers" && exit 1 
+    echo "Error, provide two numbers" && exit 1 
       
-    fi 
+fi 
       
 #For every number between the first argument and the last 
       
-read -p "Folder prefix :" prefix
 for ((i = $1; i = $2; i++)) 
       
 do 
       
     #Create a new folder for that number 
-    
-    
+      
     echo "Creating directory number $i" 
       
-    mkdir $prefix$i 
+    mkdir "week $i" 
       
 done 
-   
-exit 0
+     

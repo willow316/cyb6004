@@ -53,7 +53,7 @@ function write_header(){
 
 # Purpose - Get info about your operating system
 function create(){
-	./foldermaker.sh
+	./folderCreator.sh
 	if test $? -eq 0 ;then
 			#echo "Folder $folderglobal was created!"
 			echo ""
@@ -72,7 +72,7 @@ function create(){
 
 # Purpose - 
 function copy(){
-	./foldercopier.sh
+	./folderCopier.sh
 		if test $? -eq 0 ; then
 				show_menu
 				read_input
@@ -96,7 +96,7 @@ function set(){
 
 # Purpose - 
 function calc(){
-	./simplecalc.sh
+	./calculator.sh
 	if test $? -eq 0 ; then
 				show_menu
 				read_input
@@ -108,7 +108,7 @@ function calc(){
 
 # Purpose - 
 function weekly(){
-	./megafoldermaker2.sh
+	./megafoldermaker.sh
 	if test $? -eq 0 ; then
 				show_menu
 				read_input
@@ -123,7 +123,7 @@ function check(){
 	
 	read -p "Enter full filename to check :" filecheck
 	#loop if no file exists ----------------------------------------------
-	./filenames1.sh $filecheck
+	./filenames.sh $filecheck
 	if test $? -eq 0 ; then
 				show_menu
 				read_input
@@ -135,7 +135,7 @@ function check(){
 
 # Purpose - 
 function download(){
-	./webdownloader.sh
+	./InternetDownloader.sh
 	if test $? -eq 0 ; then
 				show_menu
 				read_input

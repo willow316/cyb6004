@@ -14,40 +14,46 @@ LINES=$(cat $filein)
 for LINE in $LINES; 
 
 	do
-		if grep -q '.sh' $LINE; then
-		#if (echo $LINE | grep -q '.sh') ; then
-		echo "This is a bash file"
-		else
-		counter=1
+		#echo "text file output :"$LINE
 		
-			elif grep -q '.txt' $LINE; then
-			echo "This is a text file"
-			else
+		if [ -z "$LINE" ] ; then
+			#echo "before grep check LINE is null"
 			counter=1
-			 
-					elif grep -q '' $LINE; then
-					echo "empty line"
-					else
-					counter=1
-					 
-
-						elif grep -q '/' $LINE; then
-						echo "This is a directory"
-						else
-						counter=1
-						 
-	fi
+					#elif grep -q '.sh' $LINE; then
+					elif (echo $LINE | grep -q '.sh') ; then
+					echo $LINE " : This is a bash file"
+			
+						#elif grep -q '.txt' $LINE; then
+						elif (echo $LINE | grep -q '.txt') ; then
+						echo $LINE " : This is a text file"
+		
+								#elif grep -q '' $LINE; then
+								#elif (echo $LINE | grep -q '') ; then
+								#echo $LINE " : empty line"
+									counter=1
+									#elif grep -q '/' $LINE; then
+									elif (echo $LINE | grep -q '../') ; then
+									echo $LINE " : This is a directory"
+			
+					
+					#echo "No lines found"
+					#echo "text file output :"$LINE
+					#fi
+		else
+		echo "I dont know what this is :" $LINE
+		counter=1
+		fi
 	#fi
 	#fi
 	#fi
 						
-						if counter=1 ; then
-	counter=2
-	else
-	"Nothing Found"
-	fi
+						#if counter=1 ; then
+	#counter=2
+	#else
+	#"Nothing Found"
+	#fi
 
-	done
+done
 	
 
 exit 0 
