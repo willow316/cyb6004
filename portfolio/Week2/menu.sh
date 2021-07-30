@@ -12,7 +12,7 @@ function pause(){
 }
 # Purpose - Password check before authorisation into the menu application
 function passwordcheck(){
-	./passCheck.sh
+	./passwordCheck.sh
 		if test $? -eq 0 ; then
 				show_menu
 				read_input
@@ -46,7 +46,7 @@ function write_header(){
 
 # Purpose - Get info about your operating system
 function create(){
-	./foldermaker.sh
+	./folderCreator.sh
 	if test $? -eq 0 ;then
 			echo "Folder $folderglobal was created!"
 			echo ""
@@ -63,7 +63,7 @@ function create(){
 
 # Purpose - 
 function copy(){
-	./foldercopier.sh
+	./folderCopier.sh
 		if test $? -eq 0 ; then
 				show_menu
 				read_input
