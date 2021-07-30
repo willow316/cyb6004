@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assignments",
     "\\portfolio",
-    "\\portfolio\\Week3"
+    "\\portfolio\\Week3",
+    "\\portfolio\\Week3\\assignment"
   ],
-  "SelectedNode": "\\portfolio\\Week3",
+  "SelectedNode": "\\portfolio\\Week3\\megafoldermaker2.sh",
   "PreviewInSolutionExplorer": false
 }
