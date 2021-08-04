@@ -1,0 +1,6 @@
+IP addresses on this computer are:
+        IP Address: 10.0.0.36  
+		Subnet Mask: 255.255.240.0  
+		Broadcast Address: 10.0.15.255
+        IP Address: 127.0.0.1  
+		Subnet Mask: 255.0.0.0
