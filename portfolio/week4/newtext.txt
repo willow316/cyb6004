@@ -1,7 +1,7 @@
 
-Bash is the default shell on most Unix-like operating systems. 
+Bash is the default shell on most Unix-like operating computers. 
       
-It allows users to control systems through a command-line interface. 
+It allows users to control computers through a command-line interface. 
       
 It acts as a scripting language that can be used to automate tasks. 
       
