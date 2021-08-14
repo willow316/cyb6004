@@ -1,5 +1,6 @@
 echo "Password File:"
 
+# Prints the titles in blue, it makes the second argument colour black with no spacing so it does not show, bin/bash filters out acounts with only bin/bash in the shell collum
 
 awk 'BEGIN {
       
@@ -12,7 +13,7 @@ awk 'BEGIN {
     "     UserID        ", "  Group ID    ", "   Function                   ","                                Home                           ","       Shell                                                  ");
 }
 
-/bin.bash/{
+/bin\/bash/{
 
 printf("| \033[32m%-20s\033[0m\033[30m%-0s\033[0m| \033[36m%-16s\033[0m    |   \033[35m%-10s\033[0m   | \033[31m%-50s\033[0m | \033[31m%-35s\033[0m                             |\033[33m%-35s\033[0m                             |\n", $1, $2, $3, $4, $5, $6, $7);
 
