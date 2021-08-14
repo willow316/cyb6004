@@ -1,0 +1,4 @@
+DNS        :8.8.8.8            :Google Main DNS    :
+DNS2       :8.8.4.4            :Google Second DNS  :
+BOT        :64.68.90.1         :BOT DNS MAIN       :
+WEB        :216.58.200.110     :WEB DNS MAIN       :

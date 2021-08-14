@@ -1,0 +1,24 @@
+
+
+#addresses2=$(cat "cveos.txt" | sed -n '/product/" {
+ #      s/a href/newLAMO/
+#p     
+  #     }')
+
+   #    echo $addresses2
+
+
+
+#sed -n '/product/' {s/a href="/a href/LAMO
+
+
+
+
+
+echo "title="Product Details Debian Debian Linux">Debian Linux" | sed -n 's/.*\(title="(\w+\s)*(\w+)">\)/\1/p'
+
+echo "title="Product Details Debian Debian Linux">Debian Linux" | sed -n 's/.*\(title=\)/\1/p' | sed -n 's/\(title=\w\s\).*/\1/p'
+
+
+
+title="(\w+\s)*(\w+)">
