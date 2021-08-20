@@ -1,12 +1,5 @@
-Windows 10: Microsoft: 172:
-Windows Server 2012: Microsoft: 156:
-Windows 8.1: Microsoft: 154:
-Windows Rt 8.1: Microsoft: 140:
-Windows 7: Microsoft: 134:
-Edge: Microsoft: 133:
-Windows Server 2008: Microsoft: 133:
-Internet Explorer: Microsoft: 129:
-Windows Vista: Microsoft: 127:
-Office: Microsoft: 48:
-Office Compatibility Pack: Microsoft: 40:
-Windows Server 2016: Microsoft: 39:
+Windows10 172
+WindowsServer 2012 156
+Windows 8.1 154
+Windows Rt 8.1 140
+
