@@ -359,6 +359,10 @@ function cveFilterInputGrep(){
 }
 
 function graph(){
+
+cveCurl
+cveScrape
+
 grep /vendor/ cveos.txt | sed 's/.* title=.*">//g' | sed 's/<\/.*//g' | sed 's/Cisco 479//g' | sed 's/.*All Time Leaders//g' > cveVendor.txt
 grep /vulnerability-list/ cveos.txt | sed 's/.* title=.*">//g' | sed 's/<\/.*//g' | sed 's/Cisco 479//g' | sed 's/.*All Time Leaders//g' >cveVulnerabilities.txt
 
