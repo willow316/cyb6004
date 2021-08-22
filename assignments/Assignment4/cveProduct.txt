@@ -1,0 +1,50 @@
+Debian Linux
+Android
+Ubuntu Linux
+Mac Os X
+Linux Kernel
+Windows 10
+Iphone Os
+Chrome
+Windows Server 2016
+Windows Server 2008
+Fedora
+Firefox
+Windows 7
+Windows Server 2012
+Windows 8.1
+Windows Rt 8.1
+Windows Server 2019
+Enterprise Linux Desktop
+Enterprise Linux Server
+Enterprise Linux Workstation
+Opensuse
+Leap
+Internet Explorer
+Tvos
+Safari
+Mysql
+Enterprise Linux
+Thunderbird
+Watchos
+Windows Vista
+Firefox Esr
+Windows Xp
+Seamonkey
+JRE
+Office
+JDK
+PHP
+Enterprise Linux Server Eus
+Mac Os X Server
+Enterprise Linux Server Aus
+Imagemagick
+Wireshark
+Itunes
+Sunos
+Gitlab
+Solaris
+IOS
+Windows 2000
+Database Server
+Solaris

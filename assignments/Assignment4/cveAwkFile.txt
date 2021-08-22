@@ -1,0 +1,50 @@
+Debian Linux: Debian: 5108:
+Android: Google: 3753:
+Ubuntu Linux: Canonical: 2986:
+Mac Os X: Apple: 2759:
+Linux Kernel: Linux: 2700:
+Windows 10: Microsoft: 2351:
+Iphone Os: Apple: 2299:
+Chrome: Google: 2198:
+Windows Server 2016: Microsoft: 2123:
+Windows Server 2008: Microsoft: 2025:
+Fedora: Fedoraproject: 1990:
+Firefox: Mozilla: 1949:
+Windows 7: Microsoft: 1896:
+Windows Server 2012: Microsoft: 1793:
+Windows 8.1: Microsoft: 1689:
+Windows Rt 8.1: Microsoft: 1558:
+Windows Server 2019: Microsoft: 1557:
+Enterprise Linux Desktop: Redhat: 1442:
+Enterprise Linux Server: Redhat: 1394:
+Enterprise Linux Workstation: Redhat: 1351:
+Opensuse: Opensuse: 1274:
+Leap: Opensuse: 1207:
+Internet Explorer: Microsoft: 1177:
+Tvos: Apple: 1134:
+Safari: Apple: 1105:
+Mysql: Oracle: 1018:
+Enterprise Linux: Redhat: 1006:
+Thunderbird: Mozilla: 1002:
+Watchos: Apple: 861:
+Windows Vista: Microsoft: 793:
+Firefox Esr: Mozilla: 746:
+Windows Xp: Microsoft: 685:
+Seamonkey: Mozilla: 680:
+JRE: Oracle: 673:
+Office: Microsoft: 666:
+JDK: Oracle: 662:
+PHP: PHP: 628:
+Enterprise Linux Server Eus: Redhat: 627:
+Mac Os X Server: Apple: 627:
+Enterprise Linux Server Aus: Redhat: 619:
+Imagemagick: Imagemagick: 612:
+Wireshark: Wireshark: 597:
+Itunes: Apple: 581:
+Sunos: SUN: 565:
+Gitlab: Gitlab: 529:
+Solaris: Oracle: 481:
+IOS: Cisco: 479:
+Windows 2000: Microsoft: 478:
+Database Server: Oracle: 466:
+Solaris: SUN: 457:
