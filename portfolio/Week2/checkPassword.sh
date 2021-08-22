@@ -24,7 +24,7 @@ if test $len -ge 8; then  #test is used to set an output condition 0=true / 1=fa
       
                 if test $? -eq 0 ; then 
       
-                echo "$password" | grep -q [$,@,#,%] # grep is used to search the string in this case checking for 4 special symbols (using an array)
+                echo "$password" | grep -q [!@#$%^] # grep is used to search the string in this case checking for special symbols (using an array)
       
                     if test $? -eq 0 ; then 
       
