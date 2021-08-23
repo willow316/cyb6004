@@ -1,5 +1,0 @@
-Windows10 172
-WindowsServer 2012 156
-Windows 8.1 154
-Windows Rt 8.1 140
-

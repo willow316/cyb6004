@@ -58,7 +58,7 @@ function passwordcheck(){
                                                      fi
                                                 done
 
-# for loop to time out after 3 cycles to avoid brute force
+			# for loop to time out after 3 cycles to avoid brute force
 		for ((i = 1; i < 4; i++))
 			do
         
@@ -107,19 +107,26 @@ function passwordcheck(){
                             fi
    
 			done
+			passwordin=clear
 			$whitetext
 			echo "GOODBYE PLEASE COME AGAIN"
 			exit 1
 }
 
-# Purpose - This function will request the user enter their username and password again and allow them to change their password
+# Purpose - This function will request the user enter their password again and allow them to change their password
 function setPassword(){
 	# First run the function passwordcheck to confirm the user is who they say they are
 	# for loop to time out after 3 cycles to avoid brute force
 		fail=3
+									
 		for ((i = 1; i < 4; i++))
 			do
-        
+									$whiteback
+									$blacktext
+                                    read -sp 'Enter your current Password :' passwordin
+									$blackback
+									$whitetext
+							#echo "print out password : " $passwordin - used for testing input to ensure function working
 									$greentext
                                     echo ""
                                     #Convert the variable input into sha256 and read out for checking hash
@@ -172,8 +179,7 @@ setPassword2(){
            while [ $passflag -eq 0 ]
                do
                     chk_pass () {
-						echo "username in function:" $username1
-                        echo "$pass_var" | grep -q '[A-Z]' || return 1                        
+						echo "$pass_var" | grep -q '[A-Z]' || return 1                        
                         echo "$pass_var" | grep -q '[a-z]' || return 1
                         echo "$pass_var" | grep -q '[0-9]' || return 1
                         # This check specifically uses regex to check for !NOT letters or numbers
@@ -187,12 +193,16 @@ setPassword2(){
 					#read -r username1
 					#echo "username is: "$username1
 					$whitetext
-                    echo 'Enter a password containing at least one small letter, one Capital letter, a number and one symbol: '
+                    #read -rs 'Enter a password containing at least one small letter, one Capital letter, a number and one symbol:' pass_var
+					echo 'Enter a password containing at least one small letter, one Capital letter, a number and one symbol:' 
+					read -rs pass_var
                     #greentext
-					read -r pass_var
-                    if chk_pass "$REPLY"; then
-						$whitetext
+					if chk_pass "$REPLY"; then
+						$whiteback
+						$blacktext
                         echo 'Thank you for storing your new password in our keypass'
+						$whitetext
+						$blackback
                         passflag=1
 						#echo "username folder check : " $username1
 
@@ -200,8 +210,7 @@ setPassword2(){
                     else
                         $redtext
                         $yellowback
-                        echo 'ERROR - please enter a password with at least one small letter, one capital letter, a number and one symbol : '
-						read -s pass_var
+                        echo 'POLICY ERROR - REVIEW INPUT'
 						$blackback
                     fi
 
@@ -473,6 +482,7 @@ function show_menu(){
 	echo "4. Webscrape CVE TOP 50 Website - Search by Year Filter Vendor"
 	echo "5. Webscrape CVE TOP 50 Website - Graphical Output"
 	echo "6  Reset Password"
+	$redtext
 	echo "7. exit"
 
 }
@@ -484,6 +494,7 @@ function read_input(){
 		$whiteback
 	read -p "Enter your choice [ 1 - 7 ] " c
 		$blackback
+		$whitetext
 						case $c in
 							1)	cveFunc ;;
 							2)	cveVendorFunc ;;

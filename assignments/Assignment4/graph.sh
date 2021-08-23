@@ -13,7 +13,7 @@ sed 's/:/ /g' cveGraph3.txt > cveGraph4.txt
 
 #read -p "Please select the number of rows to output up to 50 :" linevar
 #delete everything after line $LINEVAR due to the limitations of GNUPLOT for later lables
-sed -i '10,$d' cveGraph4.txt
+#sed -i '10,$d' cveGraph4.txt
 #sed -i '$linevar,$d' cveGraph4.txt
 #lines=$(head -n $linevar cveGraph4.txt)
 
